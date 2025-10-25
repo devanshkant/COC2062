@@ -1,0 +1,53 @@
+mind map for studying BST
+1. core concepts: 
+    definition
+    properties
+    representation
+2. Basic Operations:
+    Insertion
+    Search
+    Deletion
+    Traversal
+    Min/Max Value
+3. BST Properties & Checks
+    Validate BST (using min-max or inorder check)
+    Find kth Smallest/Largest (Inorder traversal + counter)
+    Lowest Common Ancestor (LCA)
+    Ceil / Floor in BST
+    Range Queries (print nodes in range [L, R])
+4. BST Transformations & Conversions
+    Sorted Array → BST (Divide and Conquer, mid = root)
+    Sorted Linked List → BST
+    BST → Sorted Array (Inorder)
+    BST → Balanced BST
+    Binary Tree → BST (store inorder → sort → reassign values)
+
+5. Advanced Problems:
+    Construct BST from PreOrder/PostOrder Traversal
+    Find Inorder Successor/Predecessor
+    Merge Two BSTs
+    kth largest using Morris Traversal( O(1) space)
+6. Balanced BST variants
+    AVL Trees
+    Red-Black Trees
+
+7. Common Patterns to Recognize
+    Use inorder traversal for sorted data or kth problems
+    Use recursion + range [min, max] for validation
+    Use stack for iterative traversals
+    Convert many array problems to BST equivalents (search space reduction)
+
+8. Practice Strategy
+    Level 1 (Basics):
+        Insert, Search, Delete
+        Validate BST
+        kth Smallest / LCA
+    Level 2 (Medium):
+        Construct BST from preorder
+        Range sum, Inorder successor/predecessor
+        Convert BST ↔ Array
+    Level 3 (Advanced):
+        Merge two BSTs
+        Two sum in BST
+        Recover BST
+        BST Iterator
