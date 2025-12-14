@@ -1,24 +1,16 @@
 #include<iostream>
-
+#include"LL.h"
 using namespace std;
-class Node{
-public:
-    int val;
-    Node* next;
 
-    Node(int value){
-        val = value;
-        next = nullptr;
-    }
-};
 //integer to linked list in reverse order
-Node* int_2_LL(int num){
-    if(num == 0) return new Node(0);    
-    Node *head = nullptr,
-         *tail = nullptr;
+ListNode<int>* int_2_LL(int num){
+    if(num == 0) return new ListNode<int>(0);    
+    ListNode<int> *head = nullptr;
+    ListNode<int> *tail = nullptr;
+    
     while(num > 0){
         int digit = num % 10;
-        Node* newNode = new Node(digit);
+        ListNode<int>* newNode = new ListNode<int>(digit);
         if(head == nullptr){
             head = newNode;
             tail = newNode;
@@ -30,10 +22,13 @@ Node* int_2_LL(int num){
     }
     return head;
 }
-int multiply_2_int(Node* h1, Node *h2){
+
+int multiply_2_int(ListNode<int>* h1, ListNode<int>* h2){
     int result = 0;
-    Node *t1 = h1, *t2 = h2;
+    ListNode<int> *t1 = h1;
+    ListNode<int> *t2 = h2;
     int q = 1;
+    
     while(t2){
         int d = t2->val;
         int p = 1;
@@ -51,9 +46,17 @@ int multiply_2_int(Node* h1, Node *h2){
 }
 
 int main(){
-    Node* head = int_2_LL(341);
-    Node* number = int_2_LL(72);
+    ListNode<int>* head = int_2_LL(341);
+    ListNode<int>* number = int_2_LL(72);
+    
+    cout << "First number: ";
+    head->print();
+    
+    cout << "Second number: ";
+    number->print();
+    
     int res = multiply_2_int(head, number);
-    cout << "result is = "<< res << '\n';
+    cout << "Result is = " << res << '\n';
+    
     return 0;
 }
