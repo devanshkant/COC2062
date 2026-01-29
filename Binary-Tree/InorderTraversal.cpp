@@ -1,6 +1,6 @@
-#include "bt.h"     //contains TreeNode implementation 
+#include "bt.h"     
+#include<iostream>
 #include<vector>
-using namespace std;
 void inorder(TreeNode* root, vector<int> &ans){
     if(root == NULL){
         return;
@@ -22,7 +22,7 @@ int main(){
     inorder(root, result);
     
     for(int i : result){
-        cout << i << ' ';
+        std::cout << i << ' ';
     }
     return 0;
 }
