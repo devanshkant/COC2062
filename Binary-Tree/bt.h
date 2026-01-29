@@ -1,6 +1,5 @@
-#ifndef bt_h
-#define bt_h
-#include<iostream>
+#ifndef BINARY_TREE_H
+#define BINARY_TREE_H
 
 class TreeNode{
 public:
